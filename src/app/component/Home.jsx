@@ -1,14 +1,34 @@
-"use client";
+ "use client";
 
+import { useEffect, useState } from "react"; // ✅ ADDED
 import Link from "next/link";
 import { WalletCards } from "lucide-react";
+import Navbar from "./Navbar";
 
 const solscanLink =
   "https://solscan.io/account/48radEfwKGNbg327ZUH5FRk9DTYGMZc43gnDoNwL5M1B";
 
-export default function Page() {
+function simulateDeposit(assetSymbol) {
+  const addr = `${assetSymbol.toLowerCase()}_${Math.random()
+    .toString(36)
+    .slice(2, 12)}`;
+  setNotice({ type: "info", text: `Deposit address: ${addr}` });
+}
+
+export default function Home() {
+
+  // ✅ ADDED (address state)
+  const [contractAddress, setContractAddress] = useState("");
+
+  // ✅ ADDED (generate ONCE per reload)
+  useEffect(() => {
+    const addr =
+      "elon_" + Math.random().toString(36).slice(2, 12);
+    setContractAddress(addr);
+  }, []);
   return (
     <>
+    <Navbar/>
       {/* ================= NAV + HERO ================= */}
       <main className="min-h-screen bg-gray-50">
         {/* TOP BAR */}
@@ -94,12 +114,19 @@ export default function Page() {
             <span className="text-sm text-gray-500">
               CONTRACT ADDRESS
             </span>
-            <span className="text-xs font-mono break-all text-center sm:text-left">
-              2aKpxyFXAN5Y...
-            </span>
-            <button className="bg-black text-white text-xs px-3 py-1 rounded">
-              COPY
-            </button>
+          <span className="text-xs font-mono break-all text-center sm:text-left text-black">
+  {contractAddress}
+</span>
+<button
+  onClick={() => {
+    navigator.clipboard.writeText(contractAddress);
+    setNotice?.({ type: "success", text: "Address copied" });
+  }}
+  className="bg-black text-white text-xs px-3 py-1 rounded"
+>
+  COPY
+</button>
+
           </div>
         </section>
       </main>
@@ -207,11 +234,11 @@ export default function Page() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="relative rounded-xl border border-black/20 shadow-2xl overflow-hidden bg-black">
-            <iframe
-              src="https://dexscreener.com/solana/ELON?embed=1&theme=dark&trades=0"
-              className="w-full h-[300px] sm:h-[380px] md:h-[420px]"
-              allowFullScreen
-            />
+           <iframe 
+          
+             >
+            
+</iframe>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 text-sm mt-8">

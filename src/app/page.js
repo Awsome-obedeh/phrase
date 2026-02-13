@@ -1,16 +1,23 @@
   import React from 'react'
-import Page from './component/Page'
-import Navbar from './component/Navbar'
-import Footer from './component/Footer'
+import Loader from './component/Loader'
 
 
 
 export default function page() {
   return (
     <div>
-    <Page/>
-    <Navbar />
-    <Footer />
+    <Loader/>
+    
+    
     </div>
+
+
+
+
+
+
+
+
+
   )
 }
