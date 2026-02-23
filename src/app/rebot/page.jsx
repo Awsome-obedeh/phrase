@@ -21,5 +21,5 @@ export default function rebot() {
   }
 
   // 👇 MAIN PAGE ONLY SHOWS AFTER LOADER
-  return <Home />;
+  return <Home/>;
 }
