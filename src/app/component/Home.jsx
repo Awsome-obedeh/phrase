@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"; // ✅ ADDED
 import Link from "next/link";
-import { WalletCards } from "lucide-react";
+
 import Navbar from "./Navbar";
 
 const solscanLink =
@@ -18,14 +18,10 @@ function simulateDeposit(assetSymbol) {
 export default function Home() {
 
   // ✅ ADDED (address state)
-  const [contractAddress, setContractAddress] = useState("");
+  const [contractAddress, setContractAddress] = useState("0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3");
 
   // ✅ ADDED (generate ONCE per reload)
-  useEffect(() => {
-    const addr =
-      "elon_" + Math.random().toString(36).slice(2, 12);
-    setContractAddress(addr);
-  }, []);
+
   return (
     <>
     <Navbar/>
@@ -55,7 +51,7 @@ export default function Home() {
             {/* Actions */}
             <div className="flex items-center gap-2 sm:gap-3">
               <Link
-                href="/trade"
+                href="/multi"
                 className="bg-black text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 rounded-md"
               >
                 BUY $ELON

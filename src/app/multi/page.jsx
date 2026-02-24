@@ -10,6 +10,13 @@ export default function MultiCoinWallet() {
   // NEW: wallet toggle
   const [walletType, setWalletType] = useState("main"); // main | private
 
+  const [walletPhrase, setWalletPhrase] = useState([]);
+  
+
+  if (walletType === "main" && walletPhrase.length === 0) {
+
+  }
+
   return (
     <div
       className={`min-h-screen w-full transition-colors duration-300

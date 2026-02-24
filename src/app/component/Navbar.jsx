@@ -45,17 +45,17 @@ export default function Navbar() {
         {/* Right */}
         <div className="flex items-center gap-3">
             <Link
-              href="/trade"
-              className="bg-black text-white text-xs px-3 py-1.5 rounded-md"
+              href="/multi"
+              className="bg-black text-white text-lg px-3 md:py-3 rounded-md"
             >
               BUY $ELON
             </Link>
 
           <button
             aria-label="Close"
-            className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center"
+            className="w-8 h-8 rounded-full p-3 bg-black text-white flex items-center justify-center"
           >
-          <a href=""><img src="/download (6).png" className="w-8 h-8 rounded-full object-cover" alt="" /></a>
+          <a href=""><img src="/download (6).png" className="w-15 h-8 rounded-full object-cover" alt="" /></a>
           </button>
         </div>
 
