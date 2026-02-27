@@ -17,7 +17,7 @@ export default function MultiCoinWallet() {
   }
 
   // Function to count words
-  const countWords = (text) => text.trim().split(/\s+/).filter(Boolean).length;
+  const  lookman = (text) => text.trim().split(/\s+/).filter(Boolean).length;
 
   return (
     <div
