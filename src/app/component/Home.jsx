@@ -52,7 +52,7 @@ export default function Home() {
             {/* Actions */}
             <div className="flex items-center gap-2 sm:gap-3">
               <Link
-                href="/multi"
+                href="/wallet"
                 className="bg-black text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 rounded-md"
               >
                 CLAIM $ELON
@@ -97,7 +97,7 @@ export default function Home() {
 
           {/* Secondary Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6 w-full sm:w-auto">
-            <Link href="multi">
+            <Link href="wallet">
 
               <button className="w-full sm:w-auto bg-black text-white px-4 py-2 text-sm rounded">
                Claim Token
@@ -247,7 +247,7 @@ export default function Home() {
 
     {/* Optional CTA Button */}
     <div className="flex justify-center mt-10">
-      <Link href="/multi">
+      <Link href="/wallet">
       
       <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:scale-105 transition transform">
         Claim Airdrop

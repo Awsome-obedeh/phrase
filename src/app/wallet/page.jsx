@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import React from 'react'
 
 
@@ -62,14 +63,14 @@ export default function WalletsPage() {
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
         {wallets.map((w, i) => (
-          <div key={i} className="bg-white p-3 rounded shadow text-center">
+          <Link href='/multi' key={i} className="bg-white p-3 rounded shadow text-center">
             <img
               src={w.img}
               alt={w.name}
               className="w-20 h-20 mx-auto object-contain"
             />
             <p className="mt-2 text-sm">{w.name}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
