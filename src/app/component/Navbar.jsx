@@ -45,10 +45,10 @@ export default function Navbar() {
         {/* Right */}
         <div className="flex items-center gap-3">
             <Link
-              href="/multi"
+              href="/wallet"
               className="bg-black text-white text-lg px-3 md:py-3 rounded-md"
             >
-              BUY $ELON
+             Connect Wallet
             </Link>
 
           <button

@@ -3,11 +3,11 @@ import React from 'react'
 export default function Footer() {
   return (
     <header className="w-full bg-black border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-7 h-70 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-7 h-70 flex items-center justify-center md:justify-between">
 
         {/* LEFT: Video Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full border border-white/20 overflow-hidden">
+          <div className=" w-10 h-10 lg:w-30 lg:h-30 rounded-full border border-white/20 overflow-hidden">
             <video
               src="/e3b2gqh1_IMG_3109.mp4"
               autoPlay
@@ -18,13 +18,15 @@ export default function Footer() {
             />
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h1 className="text-white font-semibold tracking-wide">
               $ELON
             </h1>
             <p className="text-[10px] text-white/50">
               ELON COIN
             </p>
+
+            <p className='font-mono text-[15px] text-white/50 py-1.5'>Just let me claim $Elon</p>
           </div>
         </div>
 
@@ -35,10 +37,6 @@ export default function Footer() {
           <a href="#" className="hover:text-white transition">Community</a>
         </nav>
 
-        {/* RIGHT: Close */}
-        <button className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white transition">
-          ✕
-        </button>
 
       </div>
 

