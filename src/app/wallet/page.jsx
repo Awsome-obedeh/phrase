@@ -59,7 +59,7 @@ export default function WalletsPage() {
   return (
     <div className="min-h-screen bg-gray-50 p-6 text-black">
       <h1 className="text-center text-xl font-bold mb-8">
-        Wallet Logos Grid
+       Choose Wallet
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
         {wallets.map((w, i) => (

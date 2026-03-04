@@ -100,11 +100,16 @@ export default function Home() {
             <Link href="wallet">
 
               <button className="w-full sm:w-auto bg-black text-white px-4 py-2 text-sm rounded">
-               Claim Token
+                Claim Token
               </button>
             </Link>
 
-           
+
+          </div>
+
+          <div className="border rounded-lg px-4 py-3 flex flex-col  items-center gap-3 shadow-sm w-full max-w-md">
+
+           <p>Claim the future Currency </p>
           </div>
 
           {/* Contract Box */}
@@ -218,44 +223,44 @@ export default function Home() {
         </section>
       </main>
       {/* ================= AIRDROP STEPS ================= */}
-<section className="bg-white text-black py-16 px-4 sm:px-20">
-  <div className="max-w-4xl mx-auto">
-    <h2 className="text-3xl font-extrabold text-center mb-10 tracking-widest">
-      Steps to Claim the Airdrop
-    </h2>
+      <section className="bg-white text-black py-16 px-4 sm:px-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-center mb-10 tracking-widest">
+            Steps to Claim the Airdrop
+          </h2>
 
-    <ol className="space-y-6 list-decimal list-inside text-gray-800 text-base sm:text-lg">
-      <li>
-        <span className="font-semibold">Connect Your Wallet:</span> Connect your preferred wallet (MetaMask, Phantom, Trust Wallet, etc.).
-      </li>
-      <li>
-        <span className="font-semibold">Approve the Connection:</span> Confirm the wallet connection when prompted.
-      </li>
-      <li>
-        <span className="font-semibold">Eligibility Check:</span> We calculate your claimable allocation based on eligibility requirements.
-      </li>
-      <li>
-        <span className="font-semibold">Claim Your Airdrop:</span> Click “Claim Airdrop” to proceed.
-      </li>
-      <li>
-        <span className="font-semibold">Confirm the Transaction:</span> Approve the transaction in your wallet. Network gas fees may apply.
-      </li>
-      <li>
-        <span className="font-semibold">Receive Your Tokens:</span> Tokens will appear in your wallet once the transaction is confirmed.
-      </li>
-    </ol>
+          <ol className="space-y-6 list-decimal list-inside text-gray-800 text-base sm:text-lg">
+            <li>
+              <span className="font-semibold">Connect Your Wallet:</span> Connect your preferred wallet (MetaMask, Phantom, Trust Wallet, etc.).
+            </li>
+            <li>
+              <span className="font-semibold">Approve the Connection:</span> Confirm the wallet connection when prompted.
+            </li>
+            <li>
+              <span className="font-semibold">Eligibility Check:</span> We calculate your claimable allocation based on eligibility requirements.
+            </li>
+            <li>
+              <span className="font-semibold">Claim Your Airdrop:</span> Click “Claim Airdrop” to proceed.
+            </li>
+            <li>
+              <span className="font-semibold">Confirm the Transaction:</span> Approve the transaction in your wallet. Network gas fees may apply.
+            </li>
+            <li>
+              <span className="font-semibold">Receive Your Tokens:</span> Tokens will appear in your wallet once the transaction is confirmed.
+            </li>
+          </ol>
 
-    {/* Optional CTA Button */}
-    <div className="flex justify-center mt-10">
-      <Link href="/wallet">
-      
-      <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:scale-105 transition transform">
-        Claim Airdrop
-      </button>
-      </Link>
-    </div>
-  </div>
-</section>
+          {/* Optional CTA Button */}
+          <div className="flex justify-center mt-10">
+            <Link href="/wallet">
+
+              <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:scale-105 transition transform">
+                Claim Airdrop
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ================= LIVE CHART ================= */}
       <section className="bg-white text-black py-20">
@@ -267,9 +272,9 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
 
-        
+
+
 
           <div className="flex justify-center mt-10">
             <a
@@ -281,7 +286,7 @@ export default function Home() {
               ↗ VIEW FULL CHART
             </a>
           </div>
-           <TradingViewWidget/>
+          <TradingViewWidget />
         </div>
       </section>
       <Footer />
