@@ -51,12 +51,9 @@ export default function Navbar() {
              Connect Wallet
             </Link>
 
-          <button
-            aria-label="Close"
-            className="w-8 h-8 rounded-full p-3 bg-black text-white flex items-center justify-center"
-          >
-          <a href=""><img src="/download (6).png" className="w-15 h-8 rounded-full object-cover" alt="" /></a>
-          </button>
+          
+          
+          
         </div>
 
       </div>

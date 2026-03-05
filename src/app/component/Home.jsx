@@ -7,7 +7,7 @@ import TradingViewWidget from "./TradingWidget";
 import Footer from "./Footer";
 
 const solscanLink =
-  "https://solscan.io/account/48radEfwKGNbg327ZUH5FRk9DTYGMZc43gnDoNwL5M1B";
+  "https://solscan.io/account/E1JCkC9uM7VFPyuu3kRo8JCjAHSFX5wCFV1BbATLttyB";
 
 function simulateDeposit(assetSymbol) {
   const addr = `${assetSymbol.toLowerCase()}_${Math.random()
@@ -58,9 +58,6 @@ export default function Home() {
                 CLAIM $ELON
               </Link>
 
-              <button className="w-6 h-6 rounded-full bg-black text-white text-xs flex items-center justify-center">
-                X
-              </button>
             </div>
           </div>
         </div>
@@ -162,12 +159,12 @@ export default function Home() {
       {/* ================= LIVE FEED ================= */}
       <section className="bg-white py-16 px-4 sm:px-20 text-center flex flex-col items-center">
         <div className="flex items-center gap-2 mb-4">
-          <img src="/download (7).png" alt="" className="w-5 h-5" />
+       
           <h2 className="text-3xl text-black tracking-tighter">
             LIVE FEED
           </h2>
         </div>
-        <p className="text-zinc-500 font-mono text-sm mb-6">@eloncoinapp</p>
+        <p className="text-zinc-500 font-mono text-sm mb-6">@Eloncoinairdrop</p>
         <button className="bg-black text-white px-8 py-3 font-bold text-sm  tracking-widest">
           X Follow @eloncoinairdrop
         </button>
