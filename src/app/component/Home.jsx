@@ -106,7 +106,7 @@ export default function Home() {
 
           <div className="border rounded-lg px-4 py-3 flex flex-col  items-center gap-3 shadow-sm w-full max-w-md">
 
-           <p>Claim the future Currency </p>
+           <p className="text-black">Claim the future Currency </p>
           </div>
 
           {/* Contract Box */}
