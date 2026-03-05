@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Loader from "../component/Loader";
+import Confirmation from "../component/Confirmation";
 
 export default function MultiCoinWallet() {
   const [collapsed, setCollapsed] = useState(false);
@@ -56,7 +56,7 @@ export default function MultiCoinWallet() {
     } 
   }
   if(loading){
-   return <Loader/>;
+   return <Confirmation/>;
   }
 
   else{

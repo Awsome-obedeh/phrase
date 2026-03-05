@@ -166,7 +166,7 @@ export default function Home() {
         </div>
         <p className="text-zinc-500 font-mono text-sm mb-6">@Eloncoinairdrop</p>
         <button className="bg-black text-white px-8 py-3 font-bold text-sm  tracking-widest">
-          X Follow @eloncoinairdrop
+           Follow @eloncoinairdrop
         </button>
       </section>
 

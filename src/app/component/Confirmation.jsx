@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-export default function Loader({ fadeOut }) {
+export default function Confirmation({fadeOut}) {
   return (
-    <section
+       <section
       className={`flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 md:px-8 lg:px-12 transition-opacity duration-700 ${
         fadeOut ? "opacity-0" : "opacity-100"
       }`}
@@ -33,7 +33,10 @@ export default function Loader({ fadeOut }) {
         <div className="h-full  bg-green-400 animate-loading myLoader" />
       </div>
 
-      
+      <h3 className="font-mono text-gray-500 my-3">Checking Wallet Eligibility</h3>
+      <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-500">
+       Please wait while we verify your wallet and calculate $ELON allocations. 
+      </p>
     </section>
-  );
+  )
 }
